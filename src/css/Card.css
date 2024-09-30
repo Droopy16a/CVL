@@ -60,7 +60,8 @@
   width: 100%;
   height: fit-content;
   width: 25%;
-  transition:cubic-bezier(0.42, 0, 0, 1.01) 0.5s;
+  transition: cubic-bezier(0.42, 0, 0, 1.01) 0.5s;
+  transition-property : transform;
   margin-left: 5vw;
   margin-right: 5vw;
   transform: scale(1.5);
