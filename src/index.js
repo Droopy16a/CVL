@@ -193,14 +193,14 @@ function Turn() {
       <Card
         pole="Event"
         img={useCheckMobileScreen() ? bgBleuM : bgBleu}
-        president="Shayan NAKHAEI et Emma GÉNEAU"
+        president="Matthieu POIRIER-COUTANSAIS et Thalia ZAOUI"
         turn={turn3}
         size={turn3 ? "120" : "100"}
       />
       <Card
         pole="Com"
         img={useCheckMobileScreen() ? bgGrisM : bgGris}
-        president="Shayan NAKHAEI et Emma GÉNEAU"
+        president="Maxence SINGER"
         turn={turn4}
         size={turn4 ? "120" : "100"}
       />
