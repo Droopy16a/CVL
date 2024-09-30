@@ -1,0 +1,127 @@
+.card {
+  background-size: 100%;
+  position: relative;
+  transition:cubic-bezier(0.42, 0, 0, 1.01) 1s;
+  border-radius: 10px;
+  border: 20px solid #e5e5da;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+  box-shadow: 0 0px 20px #0000005e;
+  /* width: 35%; */
+}
+
+.card > .textContainer {
+  position: absolute;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  color: #ffffd6;
+  flex-direction: column;
+}
+
+.textContainer > h2 {
+  font-family: "FenwayPark";
+  /* text-align: center; */
+  font-size: 2vw;
+  margin: 0;
+}
+
+.textContainer > h1 {
+  font-family: "dirk";
+  /* text-align: center; */
+  font-size: 10vw;
+  margin-top: -10%;
+  margin-bottom: 0;
+  transition:ease 1s;
+  transform: translateY(0);
+}
+
+.textContainer > h3 {
+  font-family: "AvenirHeavy";
+  /* text-align: center; */
+  font-size: 1vw;
+  margin: 0;
+}
+
+.card > img {
+  position: relative;
+  z-index: -1;
+  width: 100%;
+}
+
+.cardContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: fit-content;
+  width: 25%;
+  transition:cubic-bezier(0.42, 0, 0, 1.01) 0.5s;
+  margin-left: 5vw;
+  margin-right: 5vw;
+  transform: scale(1.5);
+  z-index: 99;
+}
+
+.turn {
+  position: relative;
+}
+
+.back {
+  transform: rotate(-15deg) translateY(15vh);
+}
+
+.front {
+  transform: rotate(15deg) translateY(15vh);
+  z-index: 0;
+}
+
+.front > .card > .textContainer > h1, .back > .card > .textContainer > h1 {
+  text-shadow: 0 0px 20px #00000000;
+  transform: translateY(5vh);
+  color: #ffffd600;
+}
+
+.front > .card, .back > .card {
+  background-size: 150%; 
+  box-shadow: 0 0px 20px rgba(0, 0, 0, 0);
+}
+
+@font-face {
+  font-family: 'dirk';
+  src: url('../assets/font/DirkTest-Black.otf');
+}
+
+@font-face {
+  font-family: 'FenwayPark';
+  src: url('../assets/font/FenwayParkJFRegular.3d488552.otf');
+}
+
+@font-face {
+  font-family: 'AvenirHeavy';
+  src: url('../assets/font/AvenirHeavy.fbfaa605.otf');
+}
+
+@media only screen and (max-width: 768px) {
+  .card {
+    border: 10px solid #e5e5da;
+  }
+
+  .textContainer > h1 {
+    text-shadow: 0 0px 20px #0000005e;
+    font-size: 14vw;
+  }
+
+  .textContainer > h3 {
+    font-size: 2vw;
+    text-align: center;
+}
+
+  .textContainer > h2 {
+    font-size: 4vw;
+  }
+}
