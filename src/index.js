@@ -162,9 +162,9 @@ function Turn() {
   
     // Only trigger movement if it exceeds the threshold
     if (Math.abs(diff) > 15) {
-      if (diff > vw(10) && nb !== -3) {
+      if (diff > vw(5) && nb !== -3) {
         handleMoveRight();
-      } else if (diff < -vw(10) && nb !== 0) {
+      } else if (diff < -vw(5) && nb !== 0) {
         handleMoveLeft();
       }
     }
