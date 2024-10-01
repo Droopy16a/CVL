@@ -8,13 +8,13 @@
       "type": "image/x-icon"
     },
     {
-      "src": "logoBG.png",
-      "type": "image/png",
+      "src": "logo.jpg",
+      "type": "image/jpg",
       "sizes": "192x192"
     },
     {
-      "src": "logoBG.png",
-      "type": "image/png",
+      "src": "logo.jpg",
+      "type": "image/jpg",
       "sizes": "512x512"
     }
   ],

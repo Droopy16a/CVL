@@ -10,6 +10,7 @@
   user-select: none;
   box-shadow: 0 0px 20px #0000005e;
   /* width: 35%; */
+  z-index: 2;
 }
 
 .card > .textContainer {
@@ -66,6 +67,7 @@
   margin-right: 5vw;
   transform: scale(1.5);
   z-index: 99;
+  transform-style: preserve-3d;
 }
 
 .turn {
@@ -90,6 +92,29 @@
 .front > .card, .back > .card {
   background-size: 150%; 
   box-shadow: 0 0px 20px rgba(0, 0, 0, 0);
+}
+
+.rotate {
+  transform: scale(1.5) rotate3d(0,1,0, 180deg);
+}
+
+.cardBack {
+    border-radius: 10px;
+    position: absolute;
+    background-color: white;
+    z-index: 1;
+    transform: rotateY(180deg);
+    width: 100%;
+    height: 100%;
+}
+
+.cardBack h1 {
+  top: 50%;
+  text-align: center;
+}
+
+.rotate .cardBack{   
+  z-index: 3;
 }
 
 @font-face {
@@ -126,3 +151,4 @@
     font-size: 4vw;
   }
 }
+

@@ -12,7 +12,7 @@ import bgVertM from './assets/img/bgVertM.png';
 import bgRougeM from './assets/img/bgRougeM.png';
 import bgBleuM from './assets/img/bgBleuM.png';
 import bgGrisM from './assets/img/bgGrisM.png';
-
+import { rotate } from 'three/webgpu';
 
 const useCheckMobileScreen = () => {
   const [width, setWidth] = useState(window.innerWidth);
@@ -115,48 +115,65 @@ function Turn() {
   const handleMouseDown = (e) => {
     setIsDragging(true);
     setStartX(e.clientX);
+    setCurrentX(e.clientX); // Initialize currentX with startX to prevent instant large diff
   };
-
+  
   const handleMouseMove = (e) => {
     if (!isDragging) return;
+  
+    const movementX = Math.abs(e.clientX - startX);
+    if (movementX < 10) return; // Increase this value if necessary for more tolerance
+  
     setCurrentX(e.clientX);
   };
-
+  
   const handleMouseUp = () => {
     setIsDragging(false);
     const diff = startX - currentX;
-
-    if (diff > 50 && nb !== -3) {
-      handleMoveRight();
-    } else if (diff < -50 && nb !== 0) {
-      handleMoveLeft();
+  
+    // Only trigger if the difference exceeds the threshold for actual drag
+    if (Math.abs(diff) > 10) {
+      if (diff > vw(5) && nb !== -3) {
+        handleMoveRight();
+      } else if (diff < -vw(5) && nb !== 0) {
+        handleMoveLeft();
+      }
     }
   };
-
+  
   const handleTouchStart = (e) => {
     setIsDragging(true);
     setStartX(e.touches[0].clientX);
+    setCurrentX(e.touches[0].clientX); // Initialize currentX with startX
   };
-
+  
   const handleTouchMove = (e) => {
     if (!isDragging) return;
+  
+    const movementX = Math.abs(e.touches[0].clientX - startX);
+    if (movementX < 15) return; // Increase the threshold on mobile for better click accuracy
+  
     setCurrentX(e.touches[0].clientX);
   };
-
+  
   const handleTouchEnd = () => {
     setIsDragging(false);
     const diff = startX - currentX;
-
-    if (diff > 50 && nb !== -3) {
-      handleMoveRight();
-    } else if (diff < -50 && nb !== 0) {
-      handleMoveLeft();
+  
+    // Only trigger movement if it exceeds the threshold
+    if (Math.abs(diff) > 15) {
+      if (diff > vw(10) && nb !== -3) {
+        handleMoveRight();
+      } else if (diff < -vw(10) && nb !== 0) {
+        handleMoveLeft();
+      }
     }
   };
 
   return (
     <div
       ref={containerRef}
+      onClick = {() => {if (!document.getElementsByClassName('null')[0].className.includes("rotate")) {document.getElementsByClassName('null')[0].className = document.getElementsByClassName('null')[0].className + " rotate"} else {document.getElementsByClassName('null')[0].className = "cardContainer null"}}}
       onMouseDown={handleMouseDown}
       onMouseMove={handleMouseMove}
       onMouseUp={handleMouseUp}
