@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/CVL/static/css/main.6bc90669.css",
-    "main.js": "/CVL/static/js/main.74fc0997.js",
+    "main.css": "/CVL/static/css/main.070027eb.css",
+    "main.js": "/CVL/static/js/main.b0627499.js",
     "static/js/453.41d52510.chunk.js": "/CVL/static/js/453.41d52510.chunk.js",
     "static/media/bgRouge.png": "/CVL/static/media/bgRouge.77730d4479cf6cae15d2.png",
     "static/media/bgRougeM.png": "/CVL/static/media/bgRougeM.71c73de6c2e45ec15fc2.png",
@@ -11,16 +11,17 @@
     "static/media/bgVertM.png": "/CVL/static/media/bgVertM.c3522a3b731dd65e64c6.png",
     "static/media/bgVert.png": "/CVL/static/media/bgVert.3ca95fcc87996a9c804e.png",
     "static/media/bgGris.png": "/CVL/static/media/bgGris.eec157633b7b6f300952.png",
+    "static/media/qm.png": "/CVL/static/media/qm.d4c444bc5a14fe3d955b.png",
     "static/media/AvenirHeavy.fbfaa605.otf": "/CVL/static/media/AvenirHeavy.fbfaa605.fa72ca810521fb2f023a.otf",
     "static/media/FenwayParkJFRegular.3d488552.otf": "/CVL/static/media/FenwayParkJFRegular.3d488552.1acd42292c397c4657ac.otf",
     "static/media/DirkTest-Black.otf": "/CVL/static/media/DirkTest-Black.cbbb54ca2c9c336c6f2d.otf",
     "index.html": "/CVL/index.html",
-    "main.6bc90669.css.map": "/CVL/static/css/main.6bc90669.css.map",
-    "main.74fc0997.js.map": "/CVL/static/js/main.74fc0997.js.map",
+    "main.070027eb.css.map": "/CVL/static/css/main.070027eb.css.map",
+    "main.b0627499.js.map": "/CVL/static/js/main.b0627499.js.map",
     "453.41d52510.chunk.js.map": "/CVL/static/js/453.41d52510.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.6bc90669.css",
-    "static/js/main.74fc0997.js"
+    "static/css/main.070027eb.css",
+    "static/js/main.b0627499.js"
   ]
 }
