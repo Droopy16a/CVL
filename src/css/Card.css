@@ -106,11 +106,38 @@
     transform: rotateY(180deg);
     width: 100%;
     height: 100%;
+    overflow-y: scroll;
+}
+
+.cardBack div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.cardBack p {
+  word-wrap: break-word;
+  font-size: x-large;
+  padding: 1em;
+  filter: blur(10px);
+}
+
+
+.cardBack img {
+  width: 100%;
+  filter: blur(10px);
+
 }
 
 .cardBack h1 {
+  word-wrap: break-word;
+  font-family: 'dirk';
   top: 50%;
   text-align: center;
+  font-size: 3vw;
+  text-transform: uppercase;
+  filter: blur(10px);
 }
 
 .rotate .cardBack{   
@@ -150,5 +177,24 @@
   .textContainer > h2 {
     font-size: 4vw;
   }
+
+  .cardBack h1 {
+    font-size: 10vw;
+    filter: blur(5px);
+  }
+
+  .cardBack p {
+    filter: blur(5px);
+    font-size: medium;
+  }
 }
+
+
+
+
+
+
+
+
+
 
