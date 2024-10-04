@@ -101,12 +101,15 @@
 .cardBack {
     border-radius: 10px;
     position: absolute;
-    background-color: white;
+    background-color: #ffffd6;
     z-index: 1;
     transform: rotateY(180deg);
     width: 100%;
     height: 100%;
     overflow-y: scroll;
+    overflow-x: hidden;
+    padding: 1em;
+    box-sizing: border-box;
 }
 
 .cardBack div {
@@ -118,16 +121,25 @@
 
 .cardBack p {
   word-wrap: break-word;
-  font-size: x-large;
+  font-size: 1vw;
   padding: 1em;
-  filter: blur(10px);
+  margin-top: 0;
 }
 
 
 .cardBack img {
-  width: 100%;
-  filter: blur(10px);
+  position: relative;
+  width: 80%;
+  left: 10%;
+  border-radius: 25px;
+}
 
+.cardBack h3 {
+  color: rgb(230, 117, 75);
+  font-size: 1vw;
+  font-family: 'AvenirHeavy';
+  text-align: center;
+  margin-bottom: 4%;
 }
 
 .cardBack h1 {
@@ -137,7 +149,8 @@
   text-align: center;
   font-size: 3vw;
   text-transform: uppercase;
-  filter: blur(10px);
+  color: #e6754b;
+  margin-bottom: 0;
 }
 
 .rotate .cardBack{   
@@ -180,21 +193,31 @@
 
   .cardBack h1 {
     font-size: 10vw;
-    filter: blur(5px);
+  }
+
+  .cardBack h3 {
+    font-size: 3vw;
+    margin-bottom: 15%;
+  }
+
+  .cardBack h2 {
+    font-size: 4vw;
   }
 
   .cardBack p {
-    filter: blur(5px);
-    font-size: medium;
+    font-size: 3vw;
+  }
+
+  .cardBack img {
+    width: 100%;
+    border-radius: 10px;
+    left: 0;
+  }
+
+  .cardBack div {
+    display: flex;
+    justify-content: normal;
+    align-items: center;
+    flex-wrap: wrap;
   }
 }
-
-
-
-
-
-
-
-
-
-

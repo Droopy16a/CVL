@@ -1,12 +1,11 @@
 // import { useState, useEffect } from 'react';
 import '../css/Card.css';
-import qm from '../assets/img/qm.png';
 
-function Card({pole, img, president, turn, size}) {
+function Card({pole, img, president, turn, size, color, list}) {
   return (
     <div className={"cardContainer " + turn}>
-      <div className='card' style={{background: `url(${img})`, backgroundSize: `${size}%`}}>
-        <img src={img} alt={"bgVert"}/>
+      <div className='card' style={{background: `url(${img[0]})`, backgroundSize: `${size}%`}}>
+        <img src={img[0]} alt={"bgVert"}/>
         <div className='textContainer'>
           <h2>Pole</h2>
           <h1>{pole}</h1>
@@ -14,12 +13,25 @@ function Card({pole, img, president, turn, size}) {
         </div>
       </div>
       <div className='cardBack'>
-          <img src={qm}/>
+          <h1 style={{color : color}}>Pole {pole}</h1>
+          <h3 style={{color : color}}>Presidents : {president}</h3>
+          <img src={img[1]} />
           
-          <h1>Pole ...</h1>
-          <p>
-          Chaussette, brume, escalier, voyage, papillon, cerise, murmure, tapis, éclair, voilier, fenêtre, nuage, forêt, mélodie, sable, étoile, horloge, rivière, plume, café, arc-en-ciel, livre, galaxie, vent, mystère, lune, cabane, océan, feuille, silence, miroir, étincelle, cristal, jardin, montagne, horizon, pluie, arbre, pierre, secret, lumière, écho, feuillage, pont, grange, fusée, pinceau, grenier, désert, colline, étang, ombre, plumeau, boussole, glaçon, ballon, coquillage, tourbillon, trésor, toile, cascade, cendre, épice, givre, carrousel, berceuse, sentier, diamant, fusain, prairie, lueur, souffle, ruche, sorbet, vigne, pétale, flamme, loupe, astre, brique, trésor, manoir, arc, ruelle, fougère, mousse, murmure, poisson, marée, sentinelle, clairière, fantôme, crépuscule, phare, grimoire, phare, plume, automne, lierre, bouton.
-          </p>
+          {list.map((item, index) => (
+            <div className='paraCard'>
+            <h2 
+              key={index}
+              style={{
+                marginBottom: 0,
+                textAlign: "left",
+                color: color
+              }}
+            >
+              {item[0]}
+            </h2>
+            <p dangerouslySetInnerHTML={{ __html: item[1] }} />
+            </div>
+          ))}
           <div>
           </div>
       </div>

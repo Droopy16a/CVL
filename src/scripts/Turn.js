@@ -12,6 +12,7 @@ import bgRougeM from '../assets/img/bgRougeM.png';
 import bgBleuM from '../assets/img/bgBleuM.png';
 import bgGrisM from '../assets/img/bgGrisM.png';
 
+
 const useCheckMobileScreen = () => {
     const [width, setWidth] = useState(window.innerWidth);
     const handleWindowSizeChange = () => {
@@ -33,12 +34,29 @@ function vw(percent) {
     return (percent * w) / 100;
 }
 
+function vh(percent) {
+  var h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
+  return (percent * h) / 100;
+}
+
+
 const rotate = () => {
-    if (!document.getElementsByClassName('null')[0].className.includes("rotate")) {document.getElementsByClassName('null')[0].className = document.getElementsByClassName('null')[0].className + " rotate"} else {document.getElementsByClassName('null')[0].className = "cardContainer null"}
+    if (!document.getElementsByClassName('null')[0].className.includes("rotate")) {
+      document.getElementsByClassName('null')[0].className = document.getElementsByClassName('null')[0].className + " rotate"
+    } else {
+      document.getElementsByClassName('null')[0].className = "cardContainer null"
+    };
+    window.scrollTo({
+      top: vh(100),
+      behavior: "smooth",
+    });
+    console.log(window.scrollY)
+
 }
   
 function Turn() { 
     const [nb, setNB] = useState(0);
+    const [color, setcolor] = useState("#e6754b");
     const [last, setLast] = useState((0 - vw(5) + (((vw(250) / 4) / 2) - (vw(15) / 2))));
     const [turn1, setTurn1] = useState(null);
     const [turn2, setTurn2] = useState(null);
@@ -51,6 +69,7 @@ function Turn() {
     const [currentX, setCurrentX] = useState(0);
   
     useEffect(() => {
+      
       const handleKeyClick = (event) => {
         if (event.key === "ArrowRight" && nb !== -3) {
           handleMoveRight();
@@ -78,6 +97,9 @@ function Turn() {
         setTurn3("turn back");
         setTurn4(null);
       }
+
+      
+      setcolor(document.body.style.backgroundColor)
   
       window.addEventListener("keyup", handleKeyClick);
       window.addEventListener("resize", () => setLast(((nb) * (vw(250) / 4) - vw(5)) + (((vw(250) / 4) / 2) - (vw(15) / 2))));
@@ -158,6 +180,7 @@ function Turn() {
   
     return (
       <div
+        id='card'
         ref={containerRef}
         onClick = {rotate}
         onMouseDown={handleMouseDown}
@@ -181,31 +204,59 @@ function Turn() {
       >
         <Card
           pole="Sport"
-          img={useCheckMobileScreen() ? bgVertM : bgVert}
+          img={[useCheckMobileScreen() ? bgVertM : bgVert, "https://images.pexels.com/photos/1171084/pexels-photo-1171084.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"]}
           president="Shayan NAKHAEI et Emma GÉNEAU"
           turn={turn1}
           size={turn1 ? "120" : "100"}
+          color={color}
+          list={
+            [
+              ["Tournois Sportifs : Foot, Green Volley, Basket, Rugby", `Rejoignez-nous pour des tournois sportifs avec des finales spectaculaires et des souvenirs en vidéo. Proposez à vos équipes d’acheter des <b style="color : ${color}">maillots personnalisés</b> ou des ballons spécifiques pour un tournoi unique ! <b style="color : ${color}">Une photo de groupe</b> pour les équipes gagnantes sera prise pour immortaliser l’événement. <b style="color : ${color}">Arbitrage impartial garanti.</b>`]
+            ]
+          }
         />
         <Card
           pole="Culture"
-          img={useCheckMobileScreen() ? bgRougeM : bgRouge}
+          img={[useCheckMobileScreen() ? bgRougeM : bgRouge, "https://images.pexels.com/photos/102127/pexels-photo-102127.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"]}
           president="Clémence RICHARD"
           turn={turn2}
           size={turn2 ? "120" : "100"}
+          color={color}
+          
+          list={
+            [
+              ["Friperie Solidaire", `Apportez vos vêtements et récupérez un <span style="font-weight: bold; color : ${color}">bon échangeable</span> contre un autre vêtement, ou payez si vous n'avez rien à donner.<br>Les vêtements restants seront donnés à une <span style="font-weight: bold; color : ${color}">association.</span><br>Les fonds récoltés serviront à financer les projets du BDE ou seront reversés à une <span style="font-weight: bold; color : ${color}">œuvre caritative</span>.`],
+              ["Interventions d'Élèves",  `Des élèves volontaires passeront dans les classes pour <span style="font-weight: bold; color: ${color}">sensibiliser sur des sujets importants</span> comme <span style="font-weight: bold; color: ${color}">l'écologie</span>, <span style="font-weight: bold; color: ${color}">le harcèlement</span>, <span style="font-weight: bold; color: ${color}">les secours</span> ou encore <span style="font-weight: bold; color: ${color}">les inégalités sociales</span>. Ces interventions seront réalisées pendant <span style="font-weight: bold; color: ${color}">les heures d'études des intervenants</span> et en <span style="font-weight: bold; color: ${color}">coordination avec les responsables de niveau</span> pour garantir un cadre éducatif. <span style="font-weight: bold; color: ${color}">Des associations partenaires</span> pourront également être présentées.`]
+            ]
+          }
         />
         <Card
           pole="Event"
-          img={useCheckMobileScreen() ? bgBleuM : bgBleu}
+          img={[useCheckMobileScreen() ? bgBleuM : bgBleu, "https://images.pexels.com/photos/1171084/pexels-photo-1171084.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"]}
           president="Matthieu POIRIER-COUTANSAIS et Thalia ZAOUI"
           turn={turn3}
           size={turn3 ? "120" : "100"}
+          color={color}
+          
+          list={
+            [
+              ["Tournois Sportifs : Foot, Green Volley, Basket, Rugby", `Rejoignez-nous pour des tournois sportifs avec des finales spectaculaires et des souvenirs en vidéo. Proposez à vos équipes d’acheter des <b style="color : ${color}">maillots personnalisés</b> ou des ballons spécifiques pour un tournoi unique ! <b style="color : ${color}">Une photo de groupe</b> pour les équipes gagnantes sera prise pour immortaliser l’événement. <b style="color : ${color}">Arbitrage impartial garanti.</b>`]
+            ]
+          }
         />
         <Card
           pole="Com"
-          img={useCheckMobileScreen() ? bgGrisM : bgGris}
+          img={[useCheckMobileScreen() ? bgGrisM : bgGris, "https://images.pexels.com/photos/1171084/pexels-photo-1171084.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"]}
           president="Maxence SINGER"
           turn={turn4}
           size={turn4 ? "120" : "100"}
+          color={color}
+          
+          list={
+            [
+              ["Tournois Sportifs : Foot, Green Volley, Basket, Rugby", `Rejoignez-nous pour des tournois sportifs avec des finales spectaculaires et des souvenirs en vidéo. Proposez à vos équipes d’acheter des <b style="color : ${color}">maillots personnalisés</b> ou des ballons spécifiques pour un tournoi unique ! <b style="color : ${color}">Une photo de groupe</b> pour les équipes gagnantes sera prise pour immortaliser l’événement. <b style="color : ${color}">Arbitrage impartial garanti.</b>`]
+            ]
+          }
         />
       </div>
     );
