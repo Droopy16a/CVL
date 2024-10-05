@@ -1,7 +1,7 @@
 // import { useState, useEffect } from 'react';
 import '../css/Card.css';
 
-function Card({pole, img, president, turn, size, color, list}) {
+function Card({pole, img, president, turn, size, color, list, blur}) {
   return (
     <div className={"cardContainer " + turn}>
       <div className='card' style={{background: `url(${img[0]})`, backgroundSize: `${size}%`}}>
@@ -18,7 +18,7 @@ function Card({pole, img, president, turn, size, color, list}) {
           <img src={img[1]} />
           
           {list.map((item, index) => (
-            <div className='paraCard'>
+            <div className='paraCard' style={{filter:"blur(" + blur + ")"}}>
             <h2 
               key={index}
               style={{

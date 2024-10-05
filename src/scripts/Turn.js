@@ -69,6 +69,46 @@ function Turn() {
     const [currentX, setCurrentX] = useState(0);
   
     useEffect(() => {
+
+      const isMobile = /Mobi|Android/i.test(navigator.userAgent);
+      console.log(isMobile);
+  
+      let lastScrollY = 0;
+      let ticking = false;
+      let scrollThreshold = isMobile ? 50 : 30; // Adjust scroll sensitivity for mobile
+  
+      const handleScroll = () => {
+        const scrollY = window.scrollY;
+        const scrollDelta = Math.abs(scrollY - lastScrollY);
+      
+        // Only proceed if the scroll delta exceeds the threshold
+        if (scrollDelta < scrollThreshold) return;
+      
+        if (!ticking) {
+          window.requestAnimationFrame(() => {
+            if (document.getElementsByClassName('null')[0].className.includes("rotate")) {
+      document.getElementsByClassName('null')[0].className = "cardContainer null"
+            }
+            const currentViewportHeight = window.innerHeight;
+            if (scrollY > lastScrollY) {
+              window.scrollTo({
+                top: Math.ceil(scrollY / currentViewportHeight) * currentViewportHeight,
+                behavior: 'smooth'
+              });
+            } else {
+              window.scrollTo({
+                top: Math.floor(scrollY / currentViewportHeight) * currentViewportHeight,
+                behavior: 'smooth'
+              });
+            }
+      
+            lastScrollY = scrollY;
+            ticking = false;
+          });
+      
+          ticking = true;
+        }
+      };
       
       const handleKeyClick = (event) => {
         if (event.key === "ArrowRight" && nb !== -3) {
@@ -101,12 +141,16 @@ function Turn() {
       
       setcolor(document.body.style.backgroundColor)
   
+      window.addEventListener('scroll', handleScroll);
       window.addEventListener("keyup", handleKeyClick);
+      window.addEventListener("scroll", handleScroll);
       window.addEventListener("resize", () => setLast(((nb) * (vw(250) / 4) - vw(5)) + (((vw(250) / 4) / 2) - (vw(15) / 2))));
   
       return () => {
+        window.addEventListener('scroll', handleScroll);
         window.removeEventListener('keyup', handleKeyClick);
-        window.removeEventListener("resize", () => setLast(((nb) * (vw(250) / 4) - vw(5)) + (((vw(250) / 4) / 2) - (vw(15) / 2))));
+      window.addEventListener("scroll", handleScroll);
+      window.removeEventListener("resize", () => setLast(((nb) * (vw(250) / 4) - vw(5)) + (((vw(250) / 4) / 2) - (vw(15) / 2))));
       };
     }, [nb]);
   
@@ -214,6 +258,7 @@ function Turn() {
               ["Tournois Sportifs : Foot, Green Volley, Basket, Rugby", `Rejoignez-nous pour des tournois sportifs avec des finales spectaculaires et des souvenirs en vidéo. Proposez à vos équipes d’acheter des <b style="color : ${color}">maillots personnalisés</b> ou des ballons spécifiques pour un tournoi unique ! <b style="color : ${color}">Une photo de groupe</b> pour les équipes gagnantes sera prise pour immortaliser l’événement. <b style="color : ${color}">Arbitrage impartial garanti.</b>`]
             ]
           }
+          blur="8px"
         />
         <Card
           pole="Culture"
@@ -229,6 +274,7 @@ function Turn() {
               ["Interventions d'Élèves",  `Des élèves volontaires passeront dans les classes pour <span style="font-weight: bold; color: ${color}">sensibiliser sur des sujets importants</span> comme <span style="font-weight: bold; color: ${color}">l'écologie</span>, <span style="font-weight: bold; color: ${color}">le harcèlement</span>, <span style="font-weight: bold; color: ${color}">les secours</span> ou encore <span style="font-weight: bold; color: ${color}">les inégalités sociales</span>. Ces interventions seront réalisées pendant <span style="font-weight: bold; color: ${color}">les heures d'études des intervenants</span> et en <span style="font-weight: bold; color: ${color}">coordination avec les responsables de niveau</span> pour garantir un cadre éducatif. <span style="font-weight: bold; color: ${color}">Des associations partenaires</span> pourront également être présentées.`]
             ]
           }
+          blur="8px"
         />
         <Card
           pole="Event"
@@ -243,6 +289,7 @@ function Turn() {
               ["Tournois Sportifs : Foot, Green Volley, Basket, Rugby", `Rejoignez-nous pour des tournois sportifs avec des finales spectaculaires et des souvenirs en vidéo. Proposez à vos équipes d’acheter des <b style="color : ${color}">maillots personnalisés</b> ou des ballons spécifiques pour un tournoi unique ! <b style="color : ${color}">Une photo de groupe</b> pour les équipes gagnantes sera prise pour immortaliser l’événement. <b style="color : ${color}">Arbitrage impartial garanti.</b>`]
             ]
           }
+          blur="8px"
         />
         <Card
           pole="Com"
@@ -257,6 +304,7 @@ function Turn() {
               ["Tournois Sportifs : Foot, Green Volley, Basket, Rugby", `Rejoignez-nous pour des tournois sportifs avec des finales spectaculaires et des souvenirs en vidéo. Proposez à vos équipes d’acheter des <b style="color : ${color}">maillots personnalisés</b> ou des ballons spécifiques pour un tournoi unique ! <b style="color : ${color}">Une photo de groupe</b> pour les équipes gagnantes sera prise pour immortaliser l’événement. <b style="color : ${color}">Arbitrage impartial garanti.</b>`]
             ]
           }
+          blur="8px"
         />
       </div>
     );
