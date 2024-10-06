@@ -8,7 +8,7 @@ function Timer() {
         const calculateTimeLeft = () => {
             const now = new Date();
             const target = new Date();
-            target.setHours(18, 0, 0, 0);
+            target.setHours(32, 0, 0, 0);
 
             if (now > target) {
                 target.setDate(target.getDate() + 1);
