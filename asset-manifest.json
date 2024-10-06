@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/CVL/static/css/main.95884327.css",
-    "main.js": "/CVL/static/js/main.8de8e77a.js",
+    "main.css": "/CVL/static/css/main.59750ef1.css",
+    "main.js": "/CVL/static/js/main.eb0c69a4.js",
     "static/js/453.41d52510.chunk.js": "/CVL/static/js/453.41d52510.chunk.js",
     "static/media/bgRouge.png": "/CVL/static/media/bgRouge.77730d4479cf6cae15d2.png",
     "static/media/bgRougeM.png": "/CVL/static/media/bgRougeM.71c73de6c2e45ec15fc2.png",
@@ -15,12 +15,12 @@
     "static/media/FenwayParkJFRegular.3d488552.otf": "/CVL/static/media/FenwayParkJFRegular.3d488552.1acd42292c397c4657ac.otf",
     "static/media/DirkTest-Black.otf": "/CVL/static/media/DirkTest-Black.cbbb54ca2c9c336c6f2d.otf",
     "index.html": "/CVL/index.html",
-    "main.95884327.css.map": "/CVL/static/css/main.95884327.css.map",
-    "main.8de8e77a.js.map": "/CVL/static/js/main.8de8e77a.js.map",
+    "main.59750ef1.css.map": "/CVL/static/css/main.59750ef1.css.map",
+    "main.eb0c69a4.js.map": "/CVL/static/js/main.eb0c69a4.js.map",
     "453.41d52510.chunk.js.map": "/CVL/static/js/453.41d52510.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.95884327.css",
-    "static/js/main.8de8e77a.js"
+    "static/css/main.59750ef1.css",
+    "static/js/main.eb0c69a4.js"
   ]
 }
