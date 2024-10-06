@@ -262,6 +262,7 @@ function Turn() {
             ]
           }
           blur="8px"
+          temps={32}
         />
         <Card
           pole="Culture"
@@ -278,6 +279,7 @@ function Turn() {
             ]
           }
           blur="8px"
+          temps={32}
         />
         <Card
           pole="Event"
@@ -293,6 +295,7 @@ function Turn() {
             ]
           }
           blur="8px"
+          temps={32}
         />
         <Card
           pole="Com"
@@ -308,6 +311,7 @@ function Turn() {
             ]
           }
           blur="8px"
+          temps={32}
         />
       </div>
     );

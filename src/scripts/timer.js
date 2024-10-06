@@ -1,14 +1,14 @@
 import { useEffect, useState } from "react";
 import '../css/timer.css';
 
-function Timer({color}) {
+function Timer({color, temps}) {
     const [timeLeft, setTimeLeft] = useState({ hours: 0, minutes: 0, seconds: 0 });
 
     useEffect(() => {
         const calculateTimeLeft = () => {
             const now = new Date();
             const target = new Date();
-            target.setHours(32, 0, 0, 0);
+            target.setHours(temps, 0, 0, 0);
 
             if (now > target) {
                 target.setDate(target.getDate() + 1);

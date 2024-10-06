@@ -2,7 +2,7 @@
 import '../css/Card.css';
 import Timer from './timer.js'
 
-function Card({pole, img, president, turn, size, color, list, blur}) {
+function Card({pole, img, president, turn, size, color, list, blur, temps}) {
   return (
     <div className={"cardContainer " + turn}>
       <div className='card' style={{background: `url(${img[0]})`, backgroundSize: `${size}%`}}>
@@ -18,8 +18,9 @@ function Card({pole, img, president, turn, size, color, list, blur}) {
           <h3 style={{color : color}}>Presidents : {president}</h3>
           <img src={img[1]} />
           <div>
-            <Timer 
+            <Timer
             color={color}
+            temps={temps}
             />
             {list.map((item, index) => (
               <div className='paraCard' style={{filter:`blur(${blur})`}}>
