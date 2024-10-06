@@ -18,7 +18,7 @@ function Card({pole, img, president, turn, size, color, list, blur}) {
           <img src={img[1]} />
           
           {list.map((item, index) => (
-            <div className='paraCard' style={{filter:"blur(" + blur + ")"}}>
+            <div className='paraCard' style={{filter:`blur(${blur})`}}>
             <h2 
               key={index}
               style={{
