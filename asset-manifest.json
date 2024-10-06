@@ -1,30 +1,31 @@
 {
   "files": {
-    "main.css": "/CVL/static/css/main.95884327.css",
-    "main.js": "/CVL/static/js/main.a6d043c6.js",
+    "main.css": "/CVL/static/css/main.2977d037.css",
+    "main.js": "/CVL/static/js/main.9171be92.js",
     "static/js/453.41d52510.chunk.js": "/CVL/static/js/453.41d52510.chunk.js",
     "static/media/poleEvent.jpg": "/CVL/static/media/poleEvent.5c4c4f97df21cbd08fbd.jpg",
     "static/media/poleSport.jpg": "/CVL/static/media/poleSport.232bfdf3e1531c26e470.jpg",
     "static/media/poleCulture.jpg": "/CVL/static/media/poleCulture.3c276c4e4d14c6ae694b.jpg",
     "static/media/poleCom.jpg": "/CVL/static/media/poleCom.0086cacc580cb360bce2.jpg",
-    "static/media/bgRouge.png": "/CVL/static/media/bgRouge.77730d4479cf6cae15d2.png",
-    "static/media/bgRougeM.png": "/CVL/static/media/bgRougeM.71c73de6c2e45ec15fc2.png",
-    "static/media/bgBleu.png": "/CVL/static/media/bgBleu.2347e771a66bc1af5a63.png",
-    "static/media/bgBleuM.png": "/CVL/static/media/bgBleuM.7e9a8deebadd251d4360.png",
-    "static/media/bgGrisM.png": "/CVL/static/media/bgGrisM.6121e0fa2c55917d50fb.png",
-    "static/media/bgVertM.png": "/CVL/static/media/bgVertM.c3522a3b731dd65e64c6.png",
-    "static/media/bgVert.png": "/CVL/static/media/bgVert.3ca95fcc87996a9c804e.png",
-    "static/media/bgGris.png": "/CVL/static/media/bgGris.eec157633b7b6f300952.png",
+    "static/media/bgVert.png": "/CVL/static/media/bgVert.0bbe80cf1a32fe35ea46.png",
+    "static/media/bgBleu.png": "/CVL/static/media/bgBleu.7e6fe9be99cbb6bc2477.png",
+    "static/media/bgGris.png": "/CVL/static/media/bgGris.5969b922dc4dc5357371.png",
+    "static/media/bgRouge.png": "/CVL/static/media/bgRouge.a9b45ce5cb8a69f76a93.png",
+    "static/media/bgVertM.png": "/CVL/static/media/bgVertM.272cc37afd515ffe4d76.png",
+    "static/media/bgGrisM.png": "/CVL/static/media/bgGrisM.f6608a64e2588f587fd8.png",
+    "static/media/bgBleuM.png": "/CVL/static/media/bgBleuM.ed5a29ceb5bd13afa3b6.png",
+    "static/media/logo.png": "/CVL/static/media/logo.8026ec10122e6a07c2db.png",
+    "static/media/bgRougeM.png": "/CVL/static/media/bgRougeM.f279135ba05a6b57c528.png",
     "static/media/AvenirHeavy.fbfaa605.otf": "/CVL/static/media/AvenirHeavy.fbfaa605.fa72ca810521fb2f023a.otf",
     "static/media/FenwayParkJFRegular.3d488552.otf": "/CVL/static/media/FenwayParkJFRegular.3d488552.1acd42292c397c4657ac.otf",
     "static/media/DirkTest-Black.otf": "/CVL/static/media/DirkTest-Black.cbbb54ca2c9c336c6f2d.otf",
     "index.html": "/CVL/index.html",
-    "main.95884327.css.map": "/CVL/static/css/main.95884327.css.map",
-    "main.a6d043c6.js.map": "/CVL/static/js/main.a6d043c6.js.map",
+    "main.2977d037.css.map": "/CVL/static/css/main.2977d037.css.map",
+    "main.9171be92.js.map": "/CVL/static/js/main.9171be92.js.map",
     "453.41d52510.chunk.js.map": "/CVL/static/js/453.41d52510.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.95884327.css",
-    "static/js/main.a6d043c6.js"
+    "static/css/main.2977d037.css",
+    "static/js/main.9171be92.js"
   ]
 }
