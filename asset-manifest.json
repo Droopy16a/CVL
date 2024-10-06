@@ -1,8 +1,12 @@
 {
   "files": {
-    "main.css": "/CVL/static/css/main.59750ef1.css",
-    "main.js": "/CVL/static/js/main.eb0c69a4.js",
+    "main.css": "/CVL/static/css/main.95884327.css",
+    "main.js": "/CVL/static/js/main.a6d043c6.js",
     "static/js/453.41d52510.chunk.js": "/CVL/static/js/453.41d52510.chunk.js",
+    "static/media/poleEvent.jpg": "/CVL/static/media/poleEvent.5c4c4f97df21cbd08fbd.jpg",
+    "static/media/poleSport.jpg": "/CVL/static/media/poleSport.232bfdf3e1531c26e470.jpg",
+    "static/media/poleCulture.jpg": "/CVL/static/media/poleCulture.3c276c4e4d14c6ae694b.jpg",
+    "static/media/poleCom.jpg": "/CVL/static/media/poleCom.0086cacc580cb360bce2.jpg",
     "static/media/bgRouge.png": "/CVL/static/media/bgRouge.77730d4479cf6cae15d2.png",
     "static/media/bgRougeM.png": "/CVL/static/media/bgRougeM.71c73de6c2e45ec15fc2.png",
     "static/media/bgBleu.png": "/CVL/static/media/bgBleu.2347e771a66bc1af5a63.png",
@@ -15,12 +19,12 @@
     "static/media/FenwayParkJFRegular.3d488552.otf": "/CVL/static/media/FenwayParkJFRegular.3d488552.1acd42292c397c4657ac.otf",
     "static/media/DirkTest-Black.otf": "/CVL/static/media/DirkTest-Black.cbbb54ca2c9c336c6f2d.otf",
     "index.html": "/CVL/index.html",
-    "main.59750ef1.css.map": "/CVL/static/css/main.59750ef1.css.map",
-    "main.eb0c69a4.js.map": "/CVL/static/js/main.eb0c69a4.js.map",
+    "main.95884327.css.map": "/CVL/static/css/main.95884327.css.map",
+    "main.a6d043c6.js.map": "/CVL/static/js/main.a6d043c6.js.map",
     "453.41d52510.chunk.js.map": "/CVL/static/js/453.41d52510.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.59750ef1.css",
-    "static/js/main.eb0c69a4.js"
+    "static/css/main.95884327.css",
+    "static/js/main.a6d043c6.js"
   ]
 }
