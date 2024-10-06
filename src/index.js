@@ -13,8 +13,8 @@ console.log(date);
 
 root.render(
   <React.StrictMode>
-    {/* <Main /> */}
-    {/* <Turn /> */}
+    <Main />
+    <Turn />
     <Timer />
   </React.StrictMode>
 );

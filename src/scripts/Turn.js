@@ -12,6 +12,11 @@ import bgRougeM from '../assets/img/bgRougeM.png';
 import bgBleuM from '../assets/img/bgBleuM.png';
 import bgGrisM from '../assets/img/bgGrisM.png';
 
+import poleCom from '../assets/img/poleCom.jpg'
+import poleSport from '../assets/img/poleSport.jpg'
+import poleEvent from '../assets/img/poleEvent.jpg'
+import poleCulture from '../assets/img/poleCulture.jpg'
+
 
 const useCheckMobileScreen = () => {
     const [width, setWidth] = useState(window.innerWidth);
@@ -248,7 +253,7 @@ function Turn() {
       >
         <Card
           pole="Sport"
-          img={[useCheckMobileScreen() ? bgVertM : bgVert, "https://images.pexels.com/photos/1171084/pexels-photo-1171084.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"]}
+          img={[useCheckMobileScreen() ? bgVertM : bgVert, poleSport]}
           president="Shayan NAKHAEI et Emma GÉNEAU"
           turn={turn1}
           size={turn1 ? "120" : "100"}
@@ -262,7 +267,7 @@ function Turn() {
         />
         <Card
           pole="Culture"
-          img={[useCheckMobileScreen() ? bgRougeM : bgRouge, "https://images.pexels.com/photos/102127/pexels-photo-102127.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"]}
+          img={[useCheckMobileScreen() ? bgRougeM : bgRouge, poleCulture]}
           president="Clémence RICHARD"
           turn={turn2}
           size={turn2 ? "120" : "100"}
@@ -278,7 +283,7 @@ function Turn() {
         />
         <Card
           pole="Event"
-          img={[useCheckMobileScreen() ? bgBleuM : bgBleu, "https://images.pexels.com/photos/1171084/pexels-photo-1171084.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"]}
+          img={[useCheckMobileScreen() ? bgBleuM : bgBleu, poleEvent]}
           president="Matthieu POIRIER-COUTANSAIS et Thalia ZAOUI"
           turn={turn3}
           size={turn3 ? "120" : "100"}
@@ -293,7 +298,7 @@ function Turn() {
         />
         <Card
           pole="Com"
-          img={[useCheckMobileScreen() ? bgGrisM : bgGris, "https://images.pexels.com/photos/1171084/pexels-photo-1171084.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"]}
+          img={[useCheckMobileScreen() ? bgGrisM : bgGris, poleCom]}
           president="Maxence SINGER"
           turn={turn4}
           size={turn4 ? "120" : "100"}
