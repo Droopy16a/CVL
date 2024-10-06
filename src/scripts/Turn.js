@@ -124,21 +124,21 @@ function Turn() {
       };
   
       if (nb === 0) {
-        document.body.style.backgroundColor = "#e6754b";
+        document.body.style.backgroundColor = "#cb904a";
         setTurn1(null);
         setTurn2("turn front");
       } else if (nb === -1){
-        document.body.style.backgroundColor = "#cb904a";
+        document.body.style.backgroundColor = "#e6754b";
         setTurn1("turn back");
         setTurn2(null);
         setTurn3("turn front");
       } else if (nb === -2) {
-        document.body.style.backgroundColor = "#0198bf";
+        document.body.style.backgroundColor = "#ca665c";
         setTurn2("turn back");
         setTurn3(null);
         setTurn4("turn front");
       } else {
-        document.body.style.backgroundColor = "#ca665c";
+        document.body.style.backgroundColor = "#0198bf";
         setTurn3("turn back");
         setTurn4(null);
       }
@@ -146,15 +146,13 @@ function Turn() {
       
       setcolor(document.body.style.backgroundColor)
   
-      window.addEventListener('scroll', handleScroll);
       window.addEventListener("keyup", handleKeyClick);
       window.addEventListener("scroll", handleScroll);
       window.addEventListener("resize", () => setLast(((nb) * (vw(250) / 4) - vw(5)) + (((vw(250) / 4) / 2) - (vw(15) / 2))));
   
       return () => {
-        window.addEventListener('scroll', handleScroll);
         window.removeEventListener('keyup', handleKeyClick);
-      window.addEventListener("scroll", handleScroll);
+      window.removeEventListener("scroll", handleScroll);
       window.removeEventListener("resize", () => setLast(((nb) * (vw(250) / 4) - vw(5)) + (((vw(250) / 4) / 2) - (vw(15) / 2))));
       };
     }, [nb]);
@@ -253,7 +251,7 @@ function Turn() {
       >
         <Card
           pole="Sport"
-          img={[useCheckMobileScreen() ? bgVertM : bgVert, poleSport]}
+          img={[useCheckMobileScreen() ? bgRougeM : bgRouge, poleSport]}
           president="Shayan NAKHAEI et Emma GÉNEAU"
           turn={turn1}
           size={turn1 ? "120" : "100"}
@@ -267,7 +265,7 @@ function Turn() {
         />
         <Card
           pole="Culture"
-          img={[useCheckMobileScreen() ? bgRougeM : bgRouge, poleCulture]}
+          img={[useCheckMobileScreen() ? bgVertM : bgVert, poleCulture]}
           president="Clémence RICHARD"
           turn={turn2}
           size={turn2 ? "120" : "100"}
@@ -283,7 +281,7 @@ function Turn() {
         />
         <Card
           pole="Event"
-          img={[useCheckMobileScreen() ? bgBleuM : bgBleu, poleEvent]}
+          img={[useCheckMobileScreen() ? bgGrisM : bgGris, poleEvent]}
           president="Matthieu POIRIER-COUTANSAIS et Thalia ZAOUI"
           turn={turn3}
           size={turn3 ? "120" : "100"}
@@ -298,7 +296,7 @@ function Turn() {
         />
         <Card
           pole="Com"
-          img={[useCheckMobileScreen() ? bgGrisM : bgGris, poleCom]}
+          img={[useCheckMobileScreen() ? bgBleuM : bgBleu, poleCom]}
           president="Maxence SINGER"
           turn={turn4}
           size={turn4 ? "120" : "100"}

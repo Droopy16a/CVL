@@ -7,6 +7,15 @@
     flex-direction: column;
 }
 
+.mainDiv img {
+    width: 7vw;
+    left: 0;
+    top : 0;
+    position: absolute;
+    padding: 2em;
+    cursor: pointer;
+}
+
 .mainDiv h1 {
     font-size: 15vw;
     font-family: 'dirk';
@@ -39,5 +48,16 @@
     
     .mainDiv h3 {
         font-size: 5vw;
+    }
+    
+    
+    .mainDiv div img {
+        width: 20%;
+        margin-bottom: -10%;
+        margin-right: -5%;
+    }
+
+    .mainDiv img {
+        width: 15vw;
     }
 }

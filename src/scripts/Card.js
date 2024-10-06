@@ -1,5 +1,6 @@
 // import { useState, useEffect } from 'react';
 import '../css/Card.css';
+import Timer from './timer.js'
 
 function Card({pole, img, president, turn, size, color, list, blur}) {
   return (
@@ -16,22 +17,26 @@ function Card({pole, img, president, turn, size, color, list, blur}) {
           <h1 style={{color : color}}>Pole {pole}</h1>
           <h3 style={{color : color}}>Presidents : {president}</h3>
           <img src={img[1]} />
-          
-          {list.map((item, index) => (
-            <div className='paraCard' style={{filter:`blur(${blur})`}}>
-            <h2 
-              key={index}
-              style={{
-                marginBottom: 0,
-                textAlign: "left",
-                color: color
-              }}
-            >
-              {item[0]}
-            </h2>
-            <p dangerouslySetInnerHTML={{ __html: item[1] }} />
-            </div>
-          ))}
+          <div>
+            <Timer 
+            color={color}
+            />
+            {list.map((item, index) => (
+              <div className='paraCard' style={{filter:`blur(${blur})`}}>
+              <h2 
+                key={index}
+                style={{
+                  marginBottom: 0,
+                  textAlign: "left",
+                  color: color
+                }}
+              >
+                {item[0]}
+              </h2>
+              <p dangerouslySetInnerHTML={{ __html: item[1] }} />
+              </div>
+            ))}
+          </div>
           <div>
           </div>
       </div>

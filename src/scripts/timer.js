@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import '../css/timer.css';
 
-function Timer() {
+function Timer({color}) {
     const [timeLeft, setTimeLeft] = useState({ hours: 0, minutes: 0, seconds: 0 });
 
     useEffect(() => {
@@ -33,7 +33,7 @@ function Timer() {
     return (
         <div>
             <div className="timeDiv">
-                <h1>{`${timeLeft.hours}h ${timeLeft.minutes}m ${timeLeft.seconds}s`}</h1>
+                <h1 style={{color:color}}>{`${timeLeft.hours}h ${timeLeft.minutes}m ${timeLeft.seconds}s`}</h1>
             </div>
         </div>
     );
