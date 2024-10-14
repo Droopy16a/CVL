@@ -6,6 +6,10 @@ function Card({pole, img, president, turn, size, color, list, blur, temps}) {
   const [isMobile, setIsMobile] = useState(/Mobi|Android/i.test(navigator.userAgent));
   useEffect(()=>{
     window.addEventListener('resize', () => setIsMobile(/Mobi|Android/i.test(navigator.userAgent)));
+    
+    return () => {
+      window.removeEventListener('resize', () => setIsMobile(/Mobi|Android/i.test(navigator.userAgent)));
+  }
   })
   return (
     <div className={"cardContainer " + turn}>
