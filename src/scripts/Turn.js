@@ -43,21 +43,6 @@ function vh(percent) {
   var h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
   return (percent * h) / 100;
 }
-
-
-const rotate = () => {
-    if (!document.getElementsByClassName('null')[0].className.includes("rotate")) {
-      document.getElementsByClassName('null')[0].className = document.getElementsByClassName('null')[0].className + " rotate"
-    } else {
-      document.getElementsByClassName('null')[0].className = "cardContainer null"
-    };
-    window.scrollTo({
-      top: vh(100),
-      behavior: "smooth",
-    });
-    console.log(window.scrollY)
-
-}
   
 function Turn() { 
     const [nb, setNB] = useState(0);
@@ -67,6 +52,7 @@ function Turn() {
     const [turn2, setTurn2] = useState(null);
     const [turn3, setTurn3] = useState(null);
     const [turn4, setTurn4] = useState(null);
+    const [r, setr] = useState(false);
     
     const containerRef = useRef(null);
     const [isDragging, setIsDragging] = useState(false);
@@ -197,9 +183,11 @@ function Turn() {
     };
     
     const handleTouchStart = (e) => {
+      if (!r){
       setIsDragging(true);
       setStartX(e.touches[0].clientX);
       setCurrentX(e.touches[0].clientX); // Initialize currentX with startX
+      }
     };
     
     const handleTouchMove = (e) => {
@@ -224,12 +212,33 @@ function Turn() {
         }
       }
     };
+
+    
+
+    const rotate = () => {
+      if (!document.getElementsByClassName('null')[0].className.includes("rotate")) {
+        document.getElementsByClassName('null')[0].className = document.getElementsByClassName('null')[0].className + " rotate"
+        setr(true);
+      } else {
+        document.getElementsByClassName('null')[0].className = "cardContainer null"
+        setr(false);
+      };
+      window.scrollTo({
+        top: vh(100),
+        behavior: "smooth",
+      });
+      console.log(window.scrollY)
+  
+  };
   
     return (
       <div
         id='card'
         ref={containerRef}
-        onClick = {rotate}
+        onClick={() => {
+          rotate();
+          console.log(r)
+        }}
         onMouseDown={handleMouseDown}
         onMouseMove={handleMouseMove}
         onMouseUp={handleMouseUp}
