@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/CVL/static/css/main.bdf9a767.css",
+    "main.css": "/CVL/static/css/main.f7a1a605.css",
     "main.js": "/CVL/static/js/main.f66d0789.js",
     "static/js/453.41d52510.chunk.js": "/CVL/static/js/453.41d52510.chunk.js",
     "static/media/poleEvent.jpg": "/CVL/static/media/poleEvent.5c4c4f97df21cbd08fbd.jpg",
@@ -20,12 +20,12 @@
     "static/media/FenwayParkJFRegular.3d488552.otf": "/CVL/static/media/FenwayParkJFRegular.3d488552.1acd42292c397c4657ac.otf",
     "static/media/DirkTest-Black.otf": "/CVL/static/media/DirkTest-Black.cbbb54ca2c9c336c6f2d.otf",
     "index.html": "/CVL/index.html",
-    "main.bdf9a767.css.map": "/CVL/static/css/main.bdf9a767.css.map",
+    "main.f7a1a605.css.map": "/CVL/static/css/main.f7a1a605.css.map",
     "main.f66d0789.js.map": "/CVL/static/js/main.f66d0789.js.map",
     "453.41d52510.chunk.js.map": "/CVL/static/js/453.41d52510.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.bdf9a767.css",
+    "static/css/main.f7a1a605.css",
     "static/js/main.f66d0789.js"
   ]
 }
