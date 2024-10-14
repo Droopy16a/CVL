@@ -251,7 +251,7 @@ function Turn() {
       >
         <Card
           pole="Sport"
-          img={[useCheckMobileScreen() ? bgRougeM : bgRouge, poleSport, "https://images.pexels.com/photos/47730/the-ball-stadion-football-the-pitch-47730.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1", "https://images.pexels.com/photos/1563796/pexels-photo-1563796.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"]}
+          img={[useCheckMobileScreen() ? bgRougeM : bgRouge, poleSport]}
           president="Shayan NAKHAEI et Emma GÉNEAU"
           turn={turn1}
           size={turn1 ? "120" : "100"}

@@ -39,7 +39,7 @@ function Card({pole, img, president, turn, size, color, list, blur, temps}) {
                 {item[0]}
               </h2>
               <div style={{flexDirection: "row-reverse", flexWrap: "nowrap"}}>
-                {isMobile || img[index + 2] === undefined ? "" :  <img src={img[index + 2]} style={{width: "40%", left: 0, padding : "1em"}}/>}
+                {isMobile || img[index + 2] === undefined ? "" :  <img src={img[index + 2]} style={{width: "35%", left: 0, padding : "1em"}}/>}
                 <p dangerouslySetInnerHTML={{ __html: item[1] }} />
               </div>
               </div>
