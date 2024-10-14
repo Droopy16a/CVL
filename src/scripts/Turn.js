@@ -147,12 +147,12 @@ function Turn() {
       setcolor(document.body.style.backgroundColor)
   
       window.addEventListener("keyup", handleKeyClick);
-      window.addEventListener("scroll", handleScroll);
+      if (!isMobile){window.addEventListener("scroll", handleScroll);}
       window.addEventListener("resize", () => setLast(((nb) * (vw(250) / 4) - vw(5)) + (((vw(250) / 4) / 2) - (vw(15) / 2))));
   
       return () => {
         window.removeEventListener('keyup', handleKeyClick);
-      window.removeEventListener("scroll", handleScroll);
+        if (!isMobile){window.removeEventListener("scroll", handleScroll);}
       window.removeEventListener("resize", () => setLast(((nb) * (vw(250) / 4) - vw(5)) + (((vw(250) / 4) / 2) - (vw(15) / 2))));
       };
     }, [nb]);
@@ -251,17 +251,30 @@ function Turn() {
       >
         <Card
           pole="Sport"
-          img={[useCheckMobileScreen() ? bgRougeM : bgRouge, poleSport]}
+          img={[useCheckMobileScreen() ? bgRougeM : bgRouge, poleSport, "https://images.pexels.com/photos/47730/the-ball-stadion-football-the-pitch-47730.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1", "https://images.pexels.com/photos/1563796/pexels-photo-1563796.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"]}
           president="Shayan NAKHAEI et Emma GÉNEAU"
           turn={turn1}
           size={turn1 ? "120" : "100"}
           color={color}
-          list={
+          list={[
             [
-              ["Tournois Sportifs : Foot, Green Volley, Basket, Rugby", `Rejoignez-nous pour des tournois sportifs avec des finales spectaculaires et des souvenirs en vidéo. Proposez à vos équipes d’acheter des <b style="color : ${color}">maillots personnalisés</b> ou des ballons spécifiques pour un tournoi unique ! <b style="color : ${color}">Une photo de groupe</b> pour les équipes gagnantes sera prise pour immortaliser l’événement. <b style="color : ${color}">Arbitrage impartial garanti.</b>`]
+              "Tournoi de Foot",
+              `Photos de groupe et vidéos <b style="color:${color}">GoPro</b> pour revivre les temps forts ! Un tout nouveau système de <b style="color:${color}">maillot</b> est disponible ! <b style="color:${color}">Créez et personnalisez</b> votre maillot à l'image de votre classe pour des <b style="color:${color}">souvenirs mémorables</b>.`
+            ],
+            [
+              "Tournoi E-Sport",
+              `Un tournoi <b style="color:${color}">Valorant</b> mixte et pour tous les <b style="color:${color}">niveaux confondus</b>. Retranscription en direct sur <b style="color:${color}">la chaîne twich du lycée</b> avec pleins d'invités`
+            ],
+            [
+              "Green Volley",
+              `<b style="color:${color}">Réhabilitation du terrain de Volley</b> dans le parc, qui sera <b style="color:${color}">accessible à tous</b> ! (mise en œuvre par la direction) Tournoi d'équipes de 4 mixtes <b style="color:${color}">Pas de restriction par classe</b>`
+            ],
+            [
+              "Match Prof vs Éleves",
+              `A la fin du tournoi de foot sera organisé un match <b style="color:${color}">professeurs élèves</b> ! Ce sera l'occasion de relâcher les tensions accumulées au cours de l'année.`
             ]
-          }
-          blur="8px"
+          ]}
+          blur="0px"
           temps={32}
         />
         <Card
@@ -272,13 +285,21 @@ function Turn() {
           size={turn2 ? "120" : "100"}
           color={color}
           
-          list={
+          list={[
             [
-              ["Friperie Solidaire", `Apportez vos vêtements et récupérez un <span style="font-weight: bold; color : ${color}">bon échangeable</span> contre un autre vêtement, ou payez si vous n'avez rien à donner.<br>Les vêtements restants seront donnés à une <span style="font-weight: bold; color : ${color}">association.</span><br>Les fonds récoltés serviront à financer les projets du BDE ou seront reversés à une <span style="font-weight: bold; color : ${color}">œuvre caritative</span>.`],
-              ["Interventions d'Élèves",  `Des élèves volontaires passeront dans les classes pour <span style="font-weight: bold; color: ${color}">sensibiliser sur des sujets importants</span> comme <span style="font-weight: bold; color: ${color}">l'écologie</span>, <span style="font-weight: bold; color: ${color}">le harcèlement</span>, <span style="font-weight: bold; color: ${color}">les secours</span> ou encore <span style="font-weight: bold; color: ${color}">les inégalités sociales</span>. Ces interventions seront réalisées pendant <span style="font-weight: bold; color: ${color}">les heures d'études des intervenants</span> et en <span style="font-weight: bold; color: ${color}">coordination avec les responsables de niveau</span> pour garantir un cadre éducatif. <span style="font-weight: bold; color: ${color}">Des associations partenaires</span> pourront également être présentées.`]
+              "Calendrier de l'Avent",
+              `Ne manquez pas les <b style="color:${color}">événements</b> qui seront proposés par <b style="color:${color}">Osilys</b> sur <b style="color:${color}">une semaine</b>. Par exemple, l'arrivée du <b style="color:${color}">Père Noël</b> ainsi que de ses <b style="color:${color}">lutins</b>, avec plein d'autres <b style="color:${color}">surprises</b> encore. Installation d'une <b style="color:${color}">boîte aux lettres</b> destinée aux <b style="color:${color}">personnes seules</b> pendant les fêtes (orphelins, personnes âgées, etc.).`
+            ],
+            [
+              "RadioNdo",
+              `En format <b style="color:${color}">podcast</b>, des <b style="color:${color}">professeurs</b> viendront nous parler de leurs <b style="color:${color}">sujets favoris</b>, afin d'en apprendre un peu plus sur eux à travers des <b style="color:${color}">anecdotes insolites</b>.`
+            ],
+            [
+              "Friperie",
+              `Vous aurez un <b style="color:${color}">ticket</b> pour chaque <b style="color:${color}">vêtement donné</b>, qui permettra de récupérer en échange un autre vêtement. Si vous n'avez pas de <b style="color:${color}">ticket</b>, vous pourrez <b style="color:${color}">acheter</b> le vêtement pour une <b style="color:${color}">somme dérisoire</b>. Les <b style="color:${color}">vêtements restants</b> seront donnés à une <b style="color:${color}">association</b>. L'argent obtenu servira à financer les <b style="color:${color}">projets du CVL</b>.`
             ]
-          }
-          blur="8px"
+          ]}
+          blur="0px"
           temps={32}
         />
         <Card
@@ -289,12 +310,33 @@ function Turn() {
           size={turn3 ? "120" : "100"}
           color={color}
           
-          list={
+          list={[
             [
-              ["Tournois Sportifs : Foot, Green Volley, Basket, Rugby", `Rejoignez-nous pour des tournois sportifs avec des finales spectaculaires et des souvenirs en vidéo. Proposez à vos équipes d’acheter des <b style="color : ${color}">maillots personnalisés</b> ou des ballons spécifiques pour un tournoi unique ! <b style="color : ${color}">Une photo de groupe</b> pour les équipes gagnantes sera prise pour immortaliser l’événement. <b style="color : ${color}">Arbitrage impartial garanti.</b>`]
+              "Chasse aux Oeufs (Pâques)",
+              `Venez nombreux à la <b style="color:${color}">chasse aux œufs</b> organisée dans le <b style="color:${color}">parc de l'école</b> ! Un <b style="color:${color}">moment convivial</b> partagé entre <b style="color:${color}">petits et grands</b>.`
+            ],
+            [
+              "Saint Valentin",
+              `Vous pourrez écrire une <b style="color:${color}">lettre anonyme</b> (ou non) que l'on distribuera à votre <b style="color:${color}">dulciné(e)</b>. Des <b style="color:${color}">moitiés de cœurs</b> seront distribuées à tous à l'entrée de l'école ! Il faudra alors retrouver sa <b style="color:${color}">moitié</b> grâce au <b style="color:${color}">chiffre inscrit</b>. Date : <b style="color:${color}">dernier vendredi avant les vacances</b>, l'occasion de célébrer la <b style="color:${color}">journée de l'élégance</b> !`
+            ],
+            [
+              "Carnaval",
+              `<b style="color:${color}">Objectif :</b> TOUT le monde déguisé. Un <b style="color:${color}">défilé</b> aura lieu en fin de journée ainsi qu'un <b style="color:${color}">concours</b> du <b style="color:${color}">meilleur déguisement</b>.`
+            ],
+            [
+              "Chandeleur (2nde)",
+              `<b style="color:${color}">Concert</b> et <b style="color:${color}">atelier crêpes</b> avec des <b style="color:${color}">toppings à foison</b> ! Tout cela rien que pour vous les <b style="color:${color}">SECONDES</b> (On ne vous oublie pas).`
+            ],
+            [
+              "Barbecue des premières",
+              `Soirée <b style="color:${color}">barbecue</b> en plein air pour vous les <b style="color:${color}">PREMIÈRES</b> ! Une <b style="color:${color}">ambiance chaleureuse</b> avec <b style="color:${color}">musique de fond</b>, au coin du <b style="color:${color}">feu</b>.`
+            ],
+            [
+              "Dernière journée des Terminales",
+              `<b style="color:${color}">Activités gonflables</b> et <b style="color:${color}">water slide</b> pour bien commencer l'été. <b style="color:${color}">Lancer de poudre colorée</b> (pour remplacer la farine et les œufs). Après-midi poursuivie d'une <b style="color:${color}">soirée chaleureuse</b>, avant de se dire un <b style="color:${color}">dernier au revoir</b>...`
             ]
-          }
-          blur="8px"
+          ]}
+          blur="0px"
           temps={32}
         />
         <Card
@@ -305,12 +347,13 @@ function Turn() {
           size={turn4 ? "120" : "100"}
           color={color}
           
-          list={
+          list={[
             [
-              ["Tournois Sportifs : Foot, Green Volley, Basket, Rugby", `Rejoignez-nous pour des tournois sportifs avec des finales spectaculaires et des souvenirs en vidéo. Proposez à vos équipes d’acheter des <b style="color : ${color}">maillots personnalisés</b> ou des ballons spécifiques pour un tournoi unique ! <b style="color : ${color}">Une photo de groupe</b> pour les équipes gagnantes sera prise pour immortaliser l’événement. <b style="color : ${color}">Arbitrage impartial garanti.</b>`]
+              "Specific Outfit Day",
+              `Pourquoi pas s'habiller <b style="color:${color}">corda</b> pour une fois ? Plusieurs jours dans l'année, nous vous suggérerons des <b style="color:${color}">jours spéciaux</b> pour s'habiller dans un <b style="color:${color}">thème donné</b> (Noël, Halloween, hommage à une <b style="color:${color}">célébrité</b>, une <b style="color:${color}">cause</b>...).`
             ]
-          }
-          blur="8px"
+          ]}
+          blur="0px"
           temps={32}
         />
       </div>
