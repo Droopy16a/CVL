@@ -58,6 +58,7 @@
     }
 
     .mainDiv img {
-        width: 20vw;
+        width: 25vw;
+        left: 30vw;
     }
 }
