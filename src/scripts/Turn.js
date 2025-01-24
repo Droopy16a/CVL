@@ -12,10 +12,10 @@ import bgRougeM from '../assets/img/bgRougeM.png';
 import bgBleuM from '../assets/img/bgBleuM.png';
 import bgGrisM from '../assets/img/bgGrisM.png';
 
-import poleCom from '../assets/img/poleCom.jpg'
-import poleSport from '../assets/img/poleSport.jpg'
-import poleEvent from '../assets/img/poleEvent.jpg'
-import poleCulture from '../assets/img/poleCulture.jpg'
+import poleCom from 'https://wallpapers.com/images/hd/blank-white-blank-template-2kjzj7o1ly1mqymq.jpg'
+import poleSport from 'https://wallpapers.com/images/hd/blank-white-blank-template-2kjzj7o1ly1mqymq.jpg'
+import poleEvent from 'https://wallpapers.com/images/hd/blank-white-blank-template-2kjzj7o1ly1mqymq.jpg'
+import poleCulture from 'https://wallpapers.com/images/hd/blank-white-blank-template-2kjzj7o1ly1mqymq.jpg'
 
 
 const useCheckMobileScreen = () => {
