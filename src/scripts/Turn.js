@@ -12,10 +12,10 @@ import bgRougeM from '../assets/img/bgRougeM.png';
 import bgBleuM from '../assets/img/bgBleuM.png';
 import bgGrisM from '../assets/img/bgGrisM.png';
 
-import poleCom from 'https://wallpapers.com/images/hd/blank-white-blank-template-2kjzj7o1ly1mqymq.jpg'
-import poleSport from 'https://wallpapers.com/images/hd/blank-white-blank-template-2kjzj7o1ly1mqymq.jpg'
-import poleEvent from 'https://wallpapers.com/images/hd/blank-white-blank-template-2kjzj7o1ly1mqymq.jpg'
-import poleCulture from 'https://wallpapers.com/images/hd/blank-white-blank-template-2kjzj7o1ly1mqymq.jpg'
+import poleCom from '../assets/img/poleCom.jpg'
+import poleSport from '../assets/img/poleCulture.jpg'
+import poleEvent from '../assets/img/poleEvent.jpg'
+import poleCulture from '../assets/img/poleSport.jpg'
 
 
 const useCheckMobileScreen = () => {
@@ -261,7 +261,7 @@ function Turn() {
         <Card
           pole="Sport"
           img={[useCheckMobileScreen() ? bgRougeM : bgRouge, poleSport]}
-          president="Shayan NAKHAEI et Emma GÉNEAU"
+          president="Nom 1 et Nom 2"
           turn={turn1}
           size={turn1 ? "120" : "100"}
           color={color}
@@ -289,7 +289,7 @@ function Turn() {
         <Card
           pole="Culture"
           img={[useCheckMobileScreen() ? bgVertM : bgVert, poleCulture]}
-          president="Clémence RICHARD"
+          president="Nom 1 et Nom 2"
           turn={turn2}
           size={turn2 ? "120" : "100"}
           color={color}
@@ -314,7 +314,7 @@ function Turn() {
         <Card
           pole="Event"
           img={[useCheckMobileScreen() ? bgGrisM : bgGris, poleEvent]}
-          president="Matthieu POIRIER-COUTANSAIS et Thalia ZAOUI"
+          president="Nom 1 et Nom 2"
           turn={turn3}
           size={turn3 ? "120" : "100"}
           color={color}
@@ -351,7 +351,7 @@ function Turn() {
         <Card
           pole="Com"
           img={[useCheckMobileScreen() ? bgBleuM : bgBleu, poleCom]}
-          president="Maxence SINGER"
+          president="Nom 1 et Nom 2"
           turn={turn4}
           size={turn4 ? "120" : "100"}
           color={color}
