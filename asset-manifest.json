@@ -1,12 +1,8 @@
 {
   "files": {
     "main.css": "/CVL/static/css/main.f7a1a605.css",
-    "main.js": "/CVL/static/js/main.c1d35bc4.js",
+    "main.js": "/CVL/static/js/main.90669b6c.js",
     "static/js/453.41d52510.chunk.js": "/CVL/static/js/453.41d52510.chunk.js",
-    "static/media/poleEvent.jpg": "/CVL/static/media/poleEvent.5c4c4f97df21cbd08fbd.jpg",
-    "static/media/poleSport.jpg": "/CVL/static/media/poleSport.232bfdf3e1531c26e470.jpg",
-    "static/media/poleCulture.jpg": "/CVL/static/media/poleCulture.3c276c4e4d14c6ae694b.jpg",
-    "static/media/poleCom.jpg": "/CVL/static/media/poleCom.0086cacc580cb360bce2.jpg",
     "static/media/bgVert.png": "/CVL/static/media/bgVert.0bbe80cf1a32fe35ea46.png",
     "static/media/bgBleu.png": "/CVL/static/media/bgBleu.7e6fe9be99cbb6bc2477.png",
     "static/media/bgGris.png": "/CVL/static/media/bgGris.5969b922dc4dc5357371.png",
@@ -21,11 +17,11 @@
     "static/media/DirkTest-Black.otf": "/CVL/static/media/DirkTest-Black.cbbb54ca2c9c336c6f2d.otf",
     "index.html": "/CVL/index.html",
     "main.f7a1a605.css.map": "/CVL/static/css/main.f7a1a605.css.map",
-    "main.c1d35bc4.js.map": "/CVL/static/js/main.c1d35bc4.js.map",
+    "main.90669b6c.js.map": "/CVL/static/js/main.90669b6c.js.map",
     "453.41d52510.chunk.js.map": "/CVL/static/js/453.41d52510.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.f7a1a605.css",
-    "static/js/main.c1d35bc4.js"
+    "static/js/main.90669b6c.js"
   ]
 }
